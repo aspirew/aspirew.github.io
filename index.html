@@ -234,11 +234,10 @@
               MyLinkedList nextElement;
               public int size = 0;
               public void add(T value){
-                  MyLinkedList< T > newElement = new MyLinkedList<>();
-                  newElement.myValue = this.myValue;
-                  newElement.nextElement = this.nextElement;
-                  this.myValue = value;
-                  this.nextElement = newElement;
+                MyLinkedList< T > newElement = new MyLinkedList<>();
+                newElement.myValue = value;
+                newElement.nextElement =  this.nextElement;
+                this.nextElement = newElement;
               }
             }
           </code></pre>
